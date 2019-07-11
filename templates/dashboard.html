@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="static/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="static/js/popper.min.js"></script>
+    <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+</head>
+<body>
+
+    <div class="container-fluid" id="main">
+        <div class=" row">
+        <div id="heading" class="col-sm-6 col-md-6">Dashboard</div>
+        <div class="col-sm-6 col-md-6">
+        <button id="power" class="btn btn-md btn-outline-success" style="margin-left:70%">OFF <sub>/on</sub></button>
+        </div>
+        </div>
+        <hr>
+
+        <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="pill" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#menu1">Alarms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#menu2">Messages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#menu3">Analysis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#menu4">Settings</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="container-fluid tab-pane active">
+                <div class="row ledrow">
+                    <div class="col-sm-2">
+                    <span id="power_led" class="led-stop"></span></div>
+                    <div class="col-sm-2">
+                    <span id="motor_led" class="led-stop"></span></div>
+                    <div class="col-sm-2">
+                    <span id="transformer_led" class="led-stop"></span></div>
+                    <div class="col-sm-2">
+                    <span id="lid_led" class="led-stop"></span></div>
+                    <div class="col-sm-2">
+                    <span id="float_min_led" class="led-stop"></span></div>
+                    <div class="col-sm-2">
+                    <span id="float_max_led" class="led-stop"></span></div>
+                </div>
+                <div class="row ledrow2">
+                    <div class="col-sm-2">
+                    <span id="tags">Power</span></div>
+                    <div class="col-sm-2">
+                    <span id="tags">Motor</span></div>
+                    <div class="col-sm-2">
+                    <span id="tags">Transformer</span></div>
+                    <div class="col-sm-2">
+                    <span id="tags">Lid</span></div>
+                    <div class="col-sm-2">
+                    <span id="tags">Float Min</span></div>
+                    <div class="col-sm-2">
+                    <span id="tags">Float Max</span></div>
+                </div>
+
+
+                <!-- <hr style="width: 100%"> -->
+                <div id="home-card-deck" class="card-deck">
+                    <div class="card" style="background-color:#F3BC06">
+                        <div class="card-title" style="margin: auto;">Motor</div>
+                        <div class="card-body">
+                            <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="motorSwitch" disabled>
+                            <label class="custom-control-label" for="motorSwitch">ON/stop</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="fwd" name="motor" class="custom-control-input" disabled>
+                                <label class="custom-control-label" for="fwd">Forward</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="rev" name="motor" class="custom-control-input" disabled>
+                                <label class="custom-control-label" for="rev">Reverse</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="background-color:#FF5833">
+                        <div class="card-title" style="margin:auto;">Transformer</div>
+                        <div class="card-body">
+                            <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="transSwitch" disabled>
+                            <label class="custom-control-label" for="transSwitch">ON/stop</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="thigh" name="transformer" class="custom-control-input" disabled>
+                                <label class="custom-control-label" for="thigh">High</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="tlow" name="transformer" class="custom-control-input" disabled>
+                                <label class="custom-control-label" for="tlow">Low</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="background-color: #900C3F">
+                        <div class="card-title" style="margin: auto;">Voltage</div>
+                        <div class="card-body text-right">
+                            <sup>V</sup>
+                            <div id="voltage" style="font-size: 1.8em;font-weight: bold;" class="text-center">23</div>
+                        </div>
+                    </div>
+                    <div class="card" style="background-color: #581845">
+                        <div class="card-title" style="margin: auto;">Current</div>
+                        <div class="card-body text-right">
+                            <sup>mA</sup>
+                            <div id="voltage" style="font-size: 1.8em;font-weight: bold;" class="text-center">300</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div id="menu1" class="container tab-pane fade"><br>
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div id="menu2" class="container tab-pane fade"><br>
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div id="menu3" class="container tab-pane fade"><br>
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div id="menu4" class="container tab-pane fade"><br>
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+
+        var server_address = 'http://127.0.0.1:5000';
+        var monitor = function(){
+            $.ajax.({
+              url:server_address+'/monitor',
+              type: "POST",
+              data: "MONITOR",
+              success: function(resp){
+                if(resp=='S'){
+                  $('#lid_led').removeClass('led-on led-warn');
+                  $('#lid_led').addClass('led-stop');
+                  $('#float_min_led').removeClass('led-on led-stop');
+                  $('#float_min_led').addClass('led-warn');
+                  $('#float_max_led').removeClass('led-stop led-warn');
+                  $('#float_max_led').addClass('led-on');
+                }
+                else if (resp=='U') {
+                  $('#lid_led').removeClass('led-warn led-stop');
+                  $('#lid_led').addClass('led-on');
+                  $('#float_min_led').removeClass('led-on led-stop');
+                  $('#float_min_led').addClass('led-warn');
+                  $('#float_max_led').removeClass('led-on led-stop');
+                  $('#float_max_led').addClass('led-warn');
+                }
+              }
+            })
+        }
+
+
+
+        $('#motorSwitch').change(function(){
+            if(this.checked){
+               $('#fwd').removeAttr('disabled');
+               $('#rev').removeAttr('disabled');
+               $('#fwd').change(function(){
+                    if(this.checked){
+                        $('#rev').attr('disabled',true);
+                        $.ajax({
+                            url: server_address+'/motor_fwd',
+                            type: "POST",
+                            data: "MOTOR_FWD",
+                            success: function(resp){
+                              alert(resp);
+                              $('#motor_led').removeClass('led-stop led-warn');
+                              $('#motor_led').addClass('led-on');
+
+                            }
+                        })
+                    }
+                });
+               $('#rev').change(function(){
+                    if(this.checked){
+                        $('#fwd').attr('disabled',true);
+                        $.ajax({
+                            url: server_address+'/motor_rev',
+                            type: "POST",
+                            data: "MOTOR_REV",
+                            success: function(resp){
+                              alert(resp);
+                              $('#motor_led').removeClass('led-stop led-warn');
+                              $('#motor_led').addClass('led-on');
+                            }
+                        })
+                    }
+                });
+            }
+            else{
+
+                $.ajax({
+                    url: server_address+'/motor_off',
+                    type: "POST",
+                    data: "MOTOR_OFF",
+                    success: function(resp){
+                      alert(resp);
+                      $('#motor_led').removeClass('led-on led-warn');
+                      $('#motor_led').addClass('led-stop');
+                    }
+                })
+                $('#fwd').prop('checked',false);
+                $('#rev').prop('checked',false);
+
+                $('#fwd').attr('disabled',true);
+                $('#rev').attr('disabled',true);
+
+               // $('#transSwitch').attr('disabled',true);
+
+            }
+        })
+
+// ----------------------------------------------------------
+        $('#transSwitch').change(function(){
+
+            if(this.checked){
+               $('#thigh').removeAttr('disabled');
+               $('#tlow').removeAttr('disabled');
+               $('#thigh').change(function(){
+                    if(this.checked){
+                        $('#tlow').attr('disabled',true);
+                        $.ajax({
+                            url: server_address+'/trans_high',
+                            type: "POST",
+                            data: "TRANS_HIGH",
+                            success: function(resp){
+                              alert(resp);
+                              $('#transformer_led').removeClass('led-stop led-warn');
+                              $('#transformer_led').addClass('led-on');
+                            }
+                        })
+                    }
+                });
+               $('#tlow').change(function(){
+                    if(this.checked){
+                        $('#thigh').attr('disabled',true);
+                        $.ajax({
+                            url: server_address+'/trans_low',
+                            type: "POST",
+                            data: "TRANS_LOW",
+                            success: function(resp){
+                              alert(resp);
+                              $('#transformer_led').removeClass('led-stop led-warn');
+                              $('#transformer_led').addClass('led-on');
+                            }
+                        })
+                    }
+                });
+
+            }
+            else{
+
+               $.ajax({
+                   url: server_address+'/trans_off',
+                   type: "POST",
+                   data: "TRANS_OFF",
+                   success: function(resp){
+                     alert(resp);
+                     $('#transformer_led').removeClass('led-on led-warn');
+                     $('#transformer_led').addClass('led-stop');
+                   }
+               })
+               $('#thigh').prop('checked',false);
+               $('#tlow').prop('checked',false);
+
+               $('#thigh').attr('disabled',true);
+               $('#tlow').attr('disabled',true);
+
+            }
+        })
+
+/*------------------------------------------------------------------------*/
+        $("#power").click(function(){
+            if($("#power").hasClass('btn-outline-success')){
+                $("#power").removeClass('btn-outline-success');
+                $.ajax({
+                    url: server_address+'/power_on',
+                    type: "POST",
+                    data: "POWER_ON",
+                    success: function(resp){
+                      alert(resp);
+                      $('#power_led').removeClass('led-stop led-warn');
+                      $('#power_led').addClass('led-on');
+                    }
+                })
+                $("#power").addClass('btn-success');
+                $("#power").html("ON <sub>/off</sub>");
+                $('#motorSwitch').removeAttr('disabled');
+								$('#transSwitch').removeAttr('disabled');
+            }
+            else{
+                $("#power").removeClass('btn-success');
+                $.ajax({
+                    url: server_address+'/power_off',
+                    type: "POST",
+                    data: "POWER_OFF",
+                    success: function(resp){
+                        alert(resp);
+                        $('#power_led').removeClass('led-on led-warn');
+                        $('#power_led').addClass('led-stop');
+  	                    $('#motor_led').removeClass('led-on led-warn');
+                        $('#motor_led').addClass('led-stop');
+                        $('#transformer_led').removeClass('led-on led-warn');
+                        $('#transformer_led').addClass('led-stop');
+                        $('#lid_led').removeClass('led-on led-stop');
+                        $('#lid_led').addClass('led-warn');
+                        $('#float_min_led').removeClass('led-on led-stop');
+                        $('#float_min_led').addClass('led-warn');
+                        $('#float_max_led').removeClass('led-on led-stop');
+                        $('#float_max_led').addClass('led-warn');
+                    }
+                })
+                $("#power").addClass('btn-outline-success');
+                $("#power").html("OFF <sub>/on</sub>");
+
+                $('#motorSwitch').attr('disabled',true);
+                $('#motorSwitch').prop('checked',false);
+                $('#motorSwitch').attr('disabled',true);
+                $('#motorSwitch').prop('checked',false);
+                $('#fwd').prop('checked',false);
+                $('#rev').prop('checked',false);
+                $('#fwd').attr('disabled',true);
+                $('#rev').attr('disabled',true);
+
+                $('transSwitch').attr('disabled',true);
+                $('#transSwitch').prop('checked',false);
+                $('#transSwitch').attr('disabled',true);
+                $('#transSwitch').prop('checked',false);
+                $('#thigh').prop('checked',false);
+                $('#tlow').prop('checked',false);
+                $('#thigh').attr('disabled',true);
+                $('#tlow').attr('disabled',true);
+
+
+
+            }
+        })
+
+        setInterval(monitor,3000)
+
+/*---------------------------------------------------------------------------*/
+    </script>
+</body>

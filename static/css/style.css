@@ -1,0 +1,269 @@
+
+body{
+	background-color: #FAFAFA !important;
+}
+
+.custom-control-input:disabled~.custom-control-label {
+    color:#323232;
+}
+
+.btn-warning{
+  background-color: #FFC300;
+  border:none;
+}
+
+input,input:focus,input:active{
+  box-shadow: none;
+}
+
+input{
+  border:none;
+}
+
+.btn-danger{
+  background-color: #FF0000;
+  border:none;
+}
+
+.btn:focus{
+  box-shadow: none !important;
+}
+
+#power{
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5), 0 6px 5px 0 rgba(0, 0, 0, 0.7) !important;
+  font-weight: bold;
+}
+#power>sub{
+  font-weight: lighter;
+}
+#heading{
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+#power:active{
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3), 0 6px 5px 0 rgba(0, 0, 0, 0.19) !important;
+}
+.nav-pills .nav-link.active{
+	background-color: blue !important;
+	font-weight: bold;
+}
+
+.nav-link{
+	color: black;
+  /*font-weight: bold;*/
+}
+
+.ledrow{
+  margin:auto;
+  margin-top: 25px;
+}
+
+.ledrow2{
+  margin: auto;
+  margin-top: 15px;
+  color: #6B6B6B;
+ /* font-weight: bold;*/
+
+}
+
+.custom-control-input{
+  box-shadow: none !important;
+}
+
+.lower-main{
+  margin: auto;
+  margin-top: 60px
+}
+#main{
+  margin: auto;
+  width: 95%;
+	margin-top: 2%;
+  padding:15px;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+}
+
+hr{
+  width: 97%;
+  border:solid 0.2px #CCCCCC !important;
+  margin-left: 0;
+}
+
+#home-card-deck{
+  margin-top: 5%;
+}
+
+.card{
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3), 0 4px 4px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  border:0;
+  color: #F4F4F4;
+}
+
+
+
+.led-off {
+  height: 30px ;
+  width: 30px;
+  margin:auto;
+  background-color: #FAFAFA ;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+.card:hover{
+  box-shadow: 12px 12px 14px 0 rgba(0, 0, 0, 0.3), 0 14px 14px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  border:0;
+  color: #F4F4F4;
+}
+
+
+.led-on {
+  height: 30px ;
+  width: 30px;
+  margin:auto;
+  background-color: #74FF00; ;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.led-warn {
+  height: 30px ;
+  width: 30px;
+  margin:auto;
+  background-color:#FFC300 ;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.led-stop{
+  height: 30px ;
+  width: 30px;
+  margin:auto;
+  background-color:#FF0000 ;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#tags{
+	margin: auto;
+	margin-top: 0;
+}
+
+
+/*#-----------------------------------------------------------------------------*/
+@media(max-width: 700px)
+{
+
+.tab-content {
+  height: 100%
+}
+.nav-pills .nav-link.active{
+  background-color: blue !important;
+  font-weight: bold;
+}
+
+
+#heading{
+  font-size: 1.6em;
+  font-weight: bold;
+}
+.nav{
+  font-size: .9em;
+}
+
+hr{
+  width: 0;
+  border:0;
+  margin:8px;
+}
+#main{
+  margin: auto;
+  border-radius: 4px;
+  width: 98%;
+  margin-top: 1%;
+  padding:8px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#home-card-deck{
+  margin-top: 5% !important;
+}
+
+.custom-control{
+  font-size: 0.8em;
+  font-weight: 2em;
+}
+
+.lower-main{
+  margin: auto;
+  margin-top: 20px
+}
+
+.ledrow{
+  margin-top: 15px;
+}
+.ledrow2{
+  margin: auto;
+  margin-top: 8px;
+  font-size: .8em;
+}
+.led-off {
+  height: 30px ;
+  width: 30px;
+  margin:auto;
+  background-color: #FAFAFA ;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.led-on {
+  height: 30px ;
+  width: 30px;
+  margin:auto;
+  background-color: #74FF00; ;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.led-warn {
+  height: 30px ;
+  width: 30px;
+  margin:auto;
+  background-color:#FFC300 ;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.led-stop{
+  height: 30px ;
+  width: 30px;
+  margin:auto;
+  background-color:#FF0000 ;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#tags{
+  margin: auto;
+  margin-top: 0;
+  font-size: small;
+}
+
+
+
+
+}
